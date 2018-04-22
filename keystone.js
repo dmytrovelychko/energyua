@@ -13,6 +13,7 @@ var handlebars = require('express-handlebars');
 keystone.init({
 	'name': 'energy_ua',
 	'brand': 'energy_ua',
+	'admin path': 'admin',
 
 	'sass': 'public',
 	'static': 'public',
