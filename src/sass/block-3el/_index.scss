@@ -1,0 +1,75 @@
+.block-3el {
+  position: relative;
+  background-color: $colour-1;
+  overflow: hidden;
+}
+.block-3el_subtitle {
+  font-size: $text-md;
+  color: $colour-4;
+  text-align: center;
+  padding: 20px;
+
+}
+.block-3el_content {
+  position: relative;
+  padding: 0 15px 15px 15px;
+}
+.block-3el_container {
+  background-color: rgba(121,168,241,.6);
+}
+.block-3el_item-wrapper {
+  padding: 15px 15px 15px 15px;
+  &:last-child {
+    padding-top: 0;
+  }
+}
+.block-3el-row {
+
+}
+.block-3el_item {
+
+}
+.block-3el_item-title {
+  background-color: $colour-1;
+  padding: 15px;
+  text-align: center;
+  color: $colour-4;
+  font-size: $text-md;
+}
+.block-3el_item-content {
+  background-color: $colour-4;
+  padding: 15px;
+  text-align: left;
+  text-indent: 2em;
+  height: 100%;
+  color: $colour-1;
+  font-size: 16px;
+}
+.block-3el_background {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+.block-3el_gradient {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 70%;
+  background: linear-gradient($colour-1, rgba(0,0,0,0), $colour-1);
+}
+.block-3el_gradient-sides {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  width: 84%;
+  height: 70%;
+  background: linear-gradient(-90deg, $colour-1, rgba(0,0,0,0), $colour-1);
+}
+.block-3el_background-img {
+  position: relative;
+  height: 70%;
+}

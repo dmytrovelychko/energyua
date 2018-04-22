@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Energy.ua</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Open graph tags for social media sites, will be used by platforms when use this link -->
+	<meta property="og:image" content="path/to/image.jpg">
+
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+	<link rel="stylesheet" href="css/index.min.css">
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+	<nav class="navbar">
+		<div class="navbar-n">
+			<div class="navbar-n_logo">
+				<a href="/"><img class="img" alt= "logo" src="img/energyua_logo.png"/></a>
+			</div>
+			<ul class="navbar-n_menu">
+                <li class="navbar-n_menu-item">
+                    <div class="lang-v">
+                        <div class="lang-v_item lang-v_item__chosen">
+                            <a href="#en">
+                                <img id="lang-v-1" class="lang-v_img" alt="en" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABhklEQVR4Xu2av2oCYRDE5xJBjFqICF5SWFxhrT6HRfIayeP4IiGg7yIiEgIKKlooll/wgvlj2oP5YObKbfZu9rez3+1dAvErEX9+WAATIK6AW0AcAJugW8AtIK6AW+AHgFFgwBDwwkh7dv+8+L8IGIVarYJ2u4nlcovj8ZTfWLVaQZoWH1uttjgcTohKgCy7x2z2iCx7xXz+kQvQ6aRYLJ4Kj3W7b5hO3+MS4FztVquBzWaHUukGzWYD+/0B9fpd4bH1epdTFsIzpwWS5H8LXO6kXL7FYPCAyWSIXu+LhqJjl1xRCSBPgD2A4QExjcFrDxiPh+j3/3pAUbFvD4hJAHsA4xwQ0xiUJ8AeoD4FfA5gEBCTCVI8ICYB5KeAvAfIb4QYm4loVmIhBMpSlCF6vgy93ghZAHkCAK0WuP4uECyAOgHyHmAB1M8BNkF1E5QnwCaoboLyBMh7gAXwGNR+HWatpth5/acouwLs/CaAXQF2fhPArgA7vwlgV4Cd3wSwK8DOL0/AJ+1MFG7sEPpLAAAAAElFTkSuQmCC"/>
+                            </a>
+                        </div>
+                        <ul class="lang-v_options hidden">
+                            <li class="lang-v_item lang-v_item__option"><a href="#ua">
+                                <img id="lang-v-2" class="lang-v_img" alt="ua" src="data:image/png;base64,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"/>
+                            </a></li>
+                            <li class="lang-v_item lang-v_item__option"><a href="#ch">
+                                <img id="lang-v-3" class="lang-v_img" alt="ch" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADmUlEQVR4Xu1aTWvUUBQ9L5nMTObL2jJKaym0duNKEXHhwp/gqks3ggVddKGoG0FQXKiLdiVS3LlT8IdUKLgTLVZBqrTUfs5HJk3ek/syKdqZadOSmEzn3dUwzby8e+45592blKHHg/V4/lAAKAb0OAJKAj1OAGWCSgJKAj2OgJKAT4DFc32il8gw9mlDFn+XAaEBwAEIQAiApZILaTQACEDLU/aAMerC+miApZNJrKMBQNWl0NpXVuwA6VGOUw+rEA1g5XkezpLW8fo4+XFoAGRyYy6gA/ZCCsxoray8ZoTj9NMKhM2w8iwH+5sO1gGwrgKAVxkGbtfBsgKrMzmP6nuDJFAUYDoxwUVtzpDXEzDkNowcJyFgHMwAys/PsWlqw7Nb0th+3CzJ1GVCvpX6n7lngPRbZgCiwWBe3IH9XZcg8C1CIs7ae/feHwDafJayZrJ6wgYy4y7OvNymr/BzqojGZx0s3XR6TchEW4IDxjBH+UFVMmb5SR72oi6BiTv2BcDX+8AtC6lBF6LCoBUEUoOeCzrLGvgmAysIOCsa1mZNNBZaExPck0L5Xg1aTmD5cR721y4AgJIkEIwRjvLdGrJXHKAKgLRMQRXMA9ZcCqvTplfVdPuacoshd7kpARfglW6QQDMXcnKK/sk6+q5bgN38QxrYfJvB71c5gAMss/9ZL5xuNMFmrnyboXStgfKjmkxWGhgDVl+Y2HiXhV4M0Og0u0M6QpMSB58CUgckBYahmW1krzqovE8DLlCYsNGY07E0VQJLkWN2ToskkBl35FqyJ+gglf8NTCAAyP3TZ10MTVew/iYrK06JnJiw0H/Dwq/7BTS+dE6KqG+ed3By0pJArb02UZ9PJWJGCAgAg3nBc77aB2O3+aGmyLy0I6tZnzfadoXyRxzQSkIyiLrBpTtFuOtMNkpxRyAA/CSEw1qGGjJISf+9nd3f06AO7/gscykld4vJ4zMJ3WBwAA5TqnbToCEgTwHyThqPE9AF0l4iAeBYT4NBiHCsp8EgANAJ0TINHtAkBVo3gosikcCuafrTYM89EougUlEtGR0DotpxyOsqACJ7LB5ypaJaTjFAMSCqN0NRcTbkdZUElASUBCJ6OxyyVqNaTnmA8gDlAcoD5GM632RC+xeZqFwr5HWVCSoTVCb4rwmGLLGuWS4hryniw0sBEB/2ybizYkAy6hDfLhQD4sM+GXdWDEhGHeLbhWJAfNgn485/AD52xVCc3wVLAAAAAElFTkSuQmCC"/>
+                            </a></li>
+                        </ul>
+                    </div>
+                </li>
+				<li class="navbar-n_delimiter"></li>
+				<li class="navbar-n_menu-item"><a href="#contacs">контакти</a></li>
+				<li class="navbar-n_delimiter"></li>
+				<li class="navbar-n_menu-item"><a href="#association">ассоціація СЕУ</a></li>
+				<li class="navbar-n_delimiter"></li>
+				<li class="navbar-n_menu-item"><a href="#cooparatives">енергокооперативи</a></li>
+				<li class="navbar-n_delimiter"></li>
+				<li class="navbar-n_menu-item"><a href="#about">про нас</a></li>
+			</ul>
+		</div>
+
+		<div class="navbar-collapsed">
+			<div class="navbar-collapsed_logo">
+				<a href="/"><img class="img" src="img/energyua_logo.png"/></a>
+			</div>
+			<div class="navbar-collapsed_btn">
+				<div class="navbar-collapsed_btn-content">
+					<div class="navbar-collapsed_btn-stripe"></div>
+					<div class="navbar-collapsed_btn-stripe"></div>
+					<div class="navbar-collapsed_btn-stripe"></div>
+				</div>
+			</div>
+
+			<ul class="navbar-collapsed_menu">
+				<li class="navbar-collapsed_menu-item"><a href="#about">про нас</a></li>
+				<li class="navbar-collapsed_menu-item"><a href="#cooparatives">енергокооперативи</a></li>
+				<li class="navbar-collapsed_menu-item"><a href="#association">ассоціація сонячної енергетики україни</a></li>
+				<li class="navbar-collapsed_menu-item"><a href="#contacs">контакти</a></li>
+				<li class="navbar-collapsed_menu-item">
+					<a class="invisible" href="#">Invisible hack</a>
+					<div class="navbar-collapsed_lang-wrapper">
+						<ul class="lang-h">
+							<li class="lang-h_item lang-h_item__chosen"><a href="#en">
+								<img id="lang-h-1" class="lang-h_img" alt="en" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABhklEQVR4Xu2av2oCYRDE5xJBjFqICF5SWFxhrT6HRfIayeP4IiGg7yIiEgIKKlooll/wgvlj2oP5YObKbfZu9rez3+1dAvErEX9+WAATIK6AW0AcAJugW8AtIK6AW+AHgFFgwBDwwkh7dv+8+L8IGIVarYJ2u4nlcovj8ZTfWLVaQZoWH1uttjgcTohKgCy7x2z2iCx7xXz+kQvQ6aRYLJ4Kj3W7b5hO3+MS4FztVquBzWaHUukGzWYD+/0B9fpd4bH1epdTFsIzpwWS5H8LXO6kXL7FYPCAyWSIXu+LhqJjl1xRCSBPgD2A4QExjcFrDxiPh+j3/3pAUbFvD4hJAHsA4xwQ0xiUJ8AeoD4FfA5gEBCTCVI8ICYB5KeAvAfIb4QYm4loVmIhBMpSlCF6vgy93ghZAHkCAK0WuP4uECyAOgHyHmAB1M8BNkF1E5QnwCaoboLyBMh7gAXwGNR+HWatpth5/acouwLs/CaAXQF2fhPArgA7vwlgV4Cd3wSwK8DOL0/AJ+1MFG7sEPpLAAAAAElFTkSuQmCC"/>
+							</a></li>
+							<li class="lang-h_item lang-h_item__option"><a href="#ua">
+								<img id="lang-h-2" class="lang-h_img" alt="ua" src="data:image/png;base64,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"/>
+							</a></li>
+							<li class="lang-h_item lang-h_item__option"><a href="#ch">
+								<img id="lang-h-3" class="lang-h_img" alt="ch" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADmUlEQVR4Xu1aTWvUUBQ9L5nMTObL2jJKaym0duNKEXHhwp/gqks3ggVddKGoG0FQXKiLdiVS3LlT8IdUKLgTLVZBqrTUfs5HJk3ek/syKdqZadOSmEzn3dUwzby8e+45592blKHHg/V4/lAAKAb0OAJKAj1OAGWCSgJKAj2OgJKAT4DFc32il8gw9mlDFn+XAaEBwAEIQAiApZILaTQACEDLU/aAMerC+miApZNJrKMBQNWl0NpXVuwA6VGOUw+rEA1g5XkezpLW8fo4+XFoAGRyYy6gA/ZCCsxoray8ZoTj9NMKhM2w8iwH+5sO1gGwrgKAVxkGbtfBsgKrMzmP6nuDJFAUYDoxwUVtzpDXEzDkNowcJyFgHMwAys/PsWlqw7Nb0th+3CzJ1GVCvpX6n7lngPRbZgCiwWBe3IH9XZcg8C1CIs7ae/feHwDafJayZrJ6wgYy4y7OvNymr/BzqojGZx0s3XR6TchEW4IDxjBH+UFVMmb5SR72oi6BiTv2BcDX+8AtC6lBF6LCoBUEUoOeCzrLGvgmAysIOCsa1mZNNBZaExPck0L5Xg1aTmD5cR721y4AgJIkEIwRjvLdGrJXHKAKgLRMQRXMA9ZcCqvTplfVdPuacoshd7kpARfglW6QQDMXcnKK/sk6+q5bgN38QxrYfJvB71c5gAMss/9ZL5xuNMFmrnyboXStgfKjmkxWGhgDVl+Y2HiXhV4M0Og0u0M6QpMSB58CUgckBYahmW1krzqovE8DLlCYsNGY07E0VQJLkWN2ToskkBl35FqyJ+gglf8NTCAAyP3TZ10MTVew/iYrK06JnJiw0H/Dwq/7BTS+dE6KqG+ed3By0pJArb02UZ9PJWJGCAgAg3nBc77aB2O3+aGmyLy0I6tZnzfadoXyRxzQSkIyiLrBpTtFuOtMNkpxRyAA/CSEw1qGGjJISf+9nd3f06AO7/gscykld4vJ4zMJ3WBwAA5TqnbToCEgTwHyThqPE9AF0l4iAeBYT4NBiHCsp8EgANAJ0TINHtAkBVo3gosikcCuafrTYM89EougUlEtGR0DotpxyOsqACJ7LB5ypaJaTjFAMSCqN0NRcTbkdZUElASUBCJ6OxyyVqNaTnmA8gDlAcoD5GM632RC+xeZqFwr5HWVCSoTVCb4rwmGLLGuWS4hryniw0sBEB/2ybizYkAy6hDfLhQD4sM+GXdWDEhGHeLbhWJAfNgn485/AD52xVCc3wVLAAAAAElFTkSuQmCC"/>
+							</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<header class="header">
+		<div class="header_upper-part">
+			<div class="header_wrapper-title">
+				<div class="header_title">
+					<img class="header_logo" alt= "logo" src="img/energyua_logo.png"/>
+					<div class="header_title-text">Енергія, яку Ви генеруєте</div>
+				</div>
+			</div>
+			<div class="header_gradient1">
+
+			</div>
+		</div>
+
+		<div class="header_lower-part">
+			<div id="#about" class="header_info-wrapper">
+				<div class="header_info">
+					<div class="header_info-inner">
+						<div class="header_info-title">
+							Послуги професіоналів
+						</div>
+						<div class="header_info-content container-fluid">
+							<div class="row">
+								<div class="hc-xs-12 hc-col-sm-6 header_info-item">
+									<div class="about_item">
+										<div class="about_header">
+											<img class="about_icon" alt="" src="img/wireframe.png"/>
+											<div class="about_title">
+												<div class="about_title-content">Консалтинг</div>
+											</div>
+										</div>
+										<div class="about_content">
+											Більше 10ти років успішного супроводу проектів у сфері геренрації сонячної енергетики
+											та багато іншого бла-бла яке вам неодмінно
+											сподобаєтся
+										</div>
+									</div>
+								</div>
+								<div class="hc-xs-12 hc-col-sm-6 header_info-item">
+									<div class="about_item">
+										<div class="about_header">
+											<img class="about_icon" alt="" src="img/packaging.png"/>
+											<div class="about_title">
+												<div class="about_title-content">Проекти "під ключ"</div>
+											</div>
+										</div>
+										<div class="about_content">
+											Ну просто бомбезні проекти. Так ви ще не
+											бачили. Більше 10ти років успішного супроводу
+											проектів у сфері геренрації сонячної нергетики
+											та багато іншого бла-бла яке вам неодмінно
+											сподобаєтся
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="hc-xs-12 hc-col-sm-6 header_info-item">
+									<div class="about_item">
+										<div class="about_header">
+											<img class="about_icon" alt="" src="img/graphic-tablet.png"/>
+											<div class="about_title">
+												<div class="about_title-content">Рішення для інвесторів</div>
+											</div>
+										</div>
+										<div class="about_content">
+											Дуже треба було вставити сюди
+											важливий текст але на українській мові...
+											Отак і наліпив аби шо... Кожній тварі по парі.
+											Сало з маслом Дуже треба було вставити
+											сюди важливий текст але на українській
+											мові...
+										</div>
+									</div>
+								</div>
+								<div class="hc-xs-12 hc-col-sm-6 header_info-item">
+									<div class="about_item">
+										<div class="about_header">
+											<img class="about_icon" alt="" src="img/loupe.png"/>
+											<div class="about_title">
+												<div class="about_title-content">Гарантійний супровід</div>
+											</div>
+										</div>
+										<div class="about_content">
+											Дуже треба було вставити сюди
+											важливий текст але на українській мові...
+											Отак і наліпив аби шо... Кожній тварі по парі.
+											Сало з маслом Дуже треба було вставити
+											сюди важливий текст але на українській
+											мові...
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="block-3el">
+		<div class="block-title">
+			енергокооперативи
+		</div>
+		<div class="block-3el_subtitle">
+			Дахові сонячні електростанції є новим ринком
+			електроенергії
+		</div>
+		<div class="block-3el_background">
+			<div class="block-3el_gradient"></div>
+            <div class="block-3el_gradient-sides"></div>
+			<img src="img/block-3el-back.jpg" alt="" class="block-3el_background-img">
+		</div>
+		<div class="block-3el_content">
+			<div class="block-3el_container container-fluid">
+				<div class="block-3el-row block-3el-row-1 row">
+					<div class="block-3el_item-wrapper hc-col-sm-6">
+						<div class="block-3el_item">
+							<div class="block-3el_item-title">
+								Що це?
+							</div>
+							<div class="block-3el_item-content">
+								Для інвестора:<br>
+								- міцний сон<br>
+								- живі гроші<br>
+								Для мешканця:<br>
+								- можливість пасивного доходу<br>
+								- відремонтована криша<br>
+							</div>
+						</div>
+					</div>
+					<div class="block-3el_item-wrapper hc-col-sm-6">
+						<div class="block-3el_item">
+							<div class="block-3el_item-title">
+								Чому?
+							</div>
+							<div class="block-3el_item-content">
+								Головна ідея максимально приблизити
+								виробництво електроенергії до споживача.
+								Ми виконуємо установку сонячних
+								електростанціх на незадіяних місцях -
+								на дахах будівель та підприємств, пустирях.
+								Укладаємо договір на продаж виробленої
+								енергії за "зеленим тарифом" в мережую.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-3el-row row">
+					<div class="block-3el_item-wrapper hc-col-sm-12">
+						<div class="block-3el_item">
+							<div class="block-3el_item-title">
+								Що пропонуемо ми?
+							</div>
+							<div class="block-3el_item-content">
+								Головна ідея максимально приблизити
+								виробництво електроенергії до споживача.
+								Ми виконуємо установку сонячних
+								електростанціх на незадіяних місцях -
+								на дахах будівель та підприємств, пустирях.
+								Укладаємо договір на продаж виробленої
+								енергії за "зеленим тарифом" в мережую.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="block-4el">
+		<div class="block-title">
+			ассоціація сонячної енергетики україни
+		</div>
+		<div class="block-4el_content container-fluid">
+			<div class="block-4el_row row">
+				<div class="block-4el_item hc-col-sm-6">
+					ТОВ «Енерджі Юей» - є ініціатором створення
+					Громадської Спілки «Асоціації Сонячної Енергетики
+					України» на ряду з провідними компаніями України,
+					які працюють в сфері Сонячної енергетики.
+					<br><br>
+					Президентом асоціації обрано один з корифеїв
+					в області сонячної енегетікі
+					<br><br>
+					Фаворський Юрій Петрович
+				</div>
+				<div class="block-4el_item hc-col-sm-6">
+					<div class="block-4el_img-wrapper">
+						<div class="test_img"></div>
+					</div>
+				</div>
+			</div>
+			<div class="block-4el_row block-4el_row__rearrange row">
+				<div class="block-4el_item hc-col-sm-6">
+					Ну ще якийсь текст про ассоціацію і чому це все
+					круто і важливо.
+					Ну ще якийсь текст про ассоціацію і чому це все
+					круто і важливо.
+					Ну ще якийсь текст про ассоціацію і чому це все
+					круто і важливо.
+					Ну ще якийсь текст про ассоціацію і чому це все
+					круто і важливо
+				</div>
+				<div class="block-4el_item hc-col-sm-6">
+					<div class="block-4el_img-wrapper">
+						<div class="test_img"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="contacts">
+		<div class="contacts_title">
+			Контакти
+		</div>
+		<div class="contacts_content">
+			<div class="contacts_gradient"></div>
+			<div class="contacts_container container-fluid">
+				<div class="contacts-row row">
+					<div class="col-sm-4 contacts_item-wrapper">
+						<div class="contacts_contact-text">
+							04080, Україна, м.Київ, вул В.Хвойки 18/14
+							<br>
+							корпус 7, офіс 708
+							<br>
+							info@energy.ua
+							<br>
+							(044) 360-47-36
+							<div class="social">
+								<a href=""><i class="fa fa-facebook-square"></i></a>
+								<a href=""><i class="fa fa-twitter-square"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class=" col-sm-8 contacts_item-wrapper contacts_item-wrapper-map">
+						<div class="contacts_map">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10154.74680848507!2d30.477728504063503!3d50.48417599271449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cde4f85c65ed%3A0xcbd63155fba97eee!2sOst-West+Express!5e0!3m2!1sen!2see!4v1523872416484" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/scripts.min.js"></script>
+	<script>
+		// TODO on load detect current language and set appropriate flags
+
+        var heightCollpsedNavbarMenu = null;
+
+        function calclulateHeightCollapsedNavbarMenu() {
+            var heights = $('.navbar-collapsed_menu-item').map(function () { return $(this).outerHeight(); }).get();
+            heightCollpsedNavbarMenu = heights.reduce(function(total, el) { return total + el; });
+		}
+
+        $(document).ready(function() {
+            calclulateHeightCollapsedNavbarMenu();
+            maximizeHeaderInfoContentHeight();
+        });
+        $(window).resize(function() {
+            $('.navbar-collapsed_menu').css({ height: 0 });
+            calclulateHeightCollapsedNavbarMenu();
+            maximizeHeaderInfoContentHeight();
+        });
+
+		// btn navbar collapsed menu
+		$('.navbar-collapsed_btn').click(function() {
+		    var currentHieght = $('.navbar-collapsed_menu').outerHeight();
+                $('.navbar-collapsed_menu').css({
+					height: currentHieght === 0 ? heightCollpsedNavbarMenu : 0
+                });
+		});
+		$('.navbar-collapsed_btn').hover(function() {
+            $(this).toggleClass('navbar-collapsed_btn__active');
+            $('.navbar-collapsed_btn-stripe').toggleClass('navbar-collapsed_btn-stripe__active');
+		});
+
+		// btn navbar normal hide neighbour delimiters
+        $('.navbar-n_menu-item').hover(function() {
+            $(this).prev().toggleClass('invisible');
+            $(this).next().toggleClass('invisible');
+        });
+
+        // lang menu navbar normal
+        $('.lang-v_item__chosen').click(function() {
+            $('.lang-v_options').toggleClass('hidden');
+        });
+        $('.lang-v_item__option').click(function() {
+            $('.lang-v_options').toggleClass('hidden');
+
+            // TODO: change language
+			// will be send request with get parameter for language
+
+		});
+
+
+        // Header info content resize to same max height
+		function maximizeHeaderInfoContentHeight() {
+		    var infoContents = $('.about_content');
+		    // reset heights
+			infoContents.css({ height: 'auto' });
+		    var heights = infoContents.map(function () { return $(this).outerHeight(); }).get();
+		    var maxHeight = heights.reduce(function(a, b) {
+                return Math.max(a, b);
+            });
+		    infoContents.css({ height: maxHeight });
+		}
+	</script>
+</body>
+</html>

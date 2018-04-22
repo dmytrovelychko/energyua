@@ -1,0 +1,237 @@
+$nav-height: 60px;
+
+// duplication of bootstrap
+.hidden {
+  display: none !important
+}
+
+.invisible {
+  visibility: hidden
+}
+
+
+// actual styles
+.img {
+   height: 100%;
+   width: auto;
+ }
+
+.navbar {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  background-color: $colour-1;
+  height: $nav-height;
+  width: 100%;
+  color: $colour-4;
+
+  a {
+    &:link{
+      text-decoration: inherit;
+      color: inherit;
+      cursor: auto;
+    }
+    &:visited {
+      text-decoration: inherit;
+      color: inherit;
+      cursor: auto;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+// Navbar normal
+.navbar-n {
+  display: none;
+  font-size: 14px;
+}
+.navbar-n_logo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  float: left;
+  padding-left: $padding-1;
+
+  a {
+    display:block;
+    height: 40px;
+  }
+
+  img:hover {
+    cursor: pointer;
+  }
+}
+.navbar-n_menu {
+  line-height: $nav-height;
+  padding-right: $padding-1;
+}
+.navbar-n_delimiter {
+  font-size: 30px;
+  float: right;
+}
+.navbar-n_delimiter:after{
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 23px;
+  background-color: $colour-4;
+}
+.navbar-n_menu-item {
+  text-transform: uppercase;
+  float: right;
+
+  >a{
+    display: block;
+    padding-left: 7px;
+    padding-right: 7px;
+    max-width: 180px;
+    overflow: hidden;
+    white-space: nowrap;
+
+    &:hover {
+      cursor: pointer;
+      color: $colour-1;
+      background-color: $colour-4;
+    }
+  }
+}
+
+// Navbar collapsed
+.navbar-collapsed {
+  position: relative;
+  height: $nav-height;
+  font-size: 24px;
+}
+.navbar-collapsed_logo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  float: left;
+  padding-left: $padding-1;
+
+  a {
+    display:block;
+    height: 40px;
+  }
+
+  img:hover {
+    cursor: pointer;
+  }
+}
+.navbar-collapsed_btn {
+  height: 100%;
+  float: right;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+.navbar-collapsed_btn__active {
+  color: $colour-1;
+  background-color: $colour-4;
+}
+
+.navbar-collapsed_btn-content {
+  position: relative;
+  top: 50%;
+  float: right;
+  transform: translateY(-50%);
+  padding-right: $padding-1;
+  padding-left: $padding-1;
+}
+.navbar-collapsed_btn-stripe {
+  border-radius: 4px;
+  width: 35px;
+  height: 4px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  background-color: $colour-4;
+}
+.navbar-collapsed_btn-stripe__active {
+  background: $colour-1;
+}
+.navbar-collapsed_menu {
+  height: 0;
+  background-color: $colour-1;
+  top: $nav-height;
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  transition: height 300ms ease-in-out;
+}
+.navbar-collapsed_menu-item {
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+
+  >a {
+    display: block;
+    padding: 1em;
+    overflow: hidden;
+
+    &:hover {
+      cursor: pointer;
+      color: $colour-1;
+      background-color: $colour-4;
+    }
+  }
+}
+.navbar-collapsed_lang-wrapper {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+// vertical languages menu
+.lang-v {
+  background-color: $colour-1;
+}
+.lang-v_item {
+  display: block;
+  height: $nav-height;
+
+  &>a {
+    padding-left: 7px;
+    padding-right: 7px;
+    text-align: center;
+  }
+  &:hover {
+    background-color: $colour-4;
+  }
+}
+.lang-v_img {
+  height: 55%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  // fix bootstrap style
+  vertical-align: baseline;
+}
+
+// horizontal languages menu
+.lang-h {
+
+}
+.lang-h_item {
+  display:inline-block;
+  width: 30%;
+
+  &:hover {
+    background-color: $colour-4;
+  }
+}
+.lang-h_item__chosen {
+  background-color: $colour-4;
+}
+.lang-h_img {
+  height: 2.9em;
+  width: auto;
+}
+
+// DEV
+body {
+  background: gray;
+}

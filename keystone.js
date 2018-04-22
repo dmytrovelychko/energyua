@@ -11,8 +11,8 @@ var handlebars = require('express-handlebars');
 // and documentation.
 
 keystone.init({
-	'name': 'energy_ua',
-	'brand': 'energy_ua',
+	'name': 'energy.ua',
+	'brand': 'energy.ua',
 	'admin path': 'admin',
 
 	'sass': 'public',
@@ -60,7 +60,4 @@ keystone.set('nav', {
 });
 
 // Start Keystone to connect to your database and initialise the web server
-
-
-
 keystone.start();

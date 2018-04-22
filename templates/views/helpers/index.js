@@ -123,7 +123,7 @@ module.exports = function () {
 	// block rendering for keystone admin css
 	_helpers.isAdminEditorCSS = function (user, options) {
 		var output = '';
-		if (typeof (user) !== 'undefined' && user.isAdmin) {
+		if (typeof (user) !== 'undefined' && user && user.isAdmin) {
 			output = cssLinkTemplate({
 				href: '/keystone/styles/content/editor.min.css',
 			});
@@ -134,7 +134,7 @@ module.exports = function () {
 	// block rendering for keystone admin js
 	_helpers.isAdminEditorJS = function (user, options) {
 		var output = '';
-		if (typeof (user) !== 'undefined' && user.isAdmin) {
+		if (typeof (user) !== 'undefined' && user && user.isAdmin) {
 			output = scriptTemplate({
 				src: '/keystone/js/content/editor.js',
 			});

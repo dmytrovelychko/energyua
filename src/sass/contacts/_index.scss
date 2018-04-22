@@ -1,0 +1,62 @@
+.contacts {
+}
+.contacts_title {
+  background-color: $colour-1;
+  padding: 15px;
+  color: $colour-4;
+  font-size: 24px;
+  text-align: center;
+}
+.contacts_container {
+  padding-top: 15px;
+}
+.contacts_content {
+  background-image: url("../img/footer_bkg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.contacts_item-wrapper {
+  margin-bottom: 15px;
+}
+.contacts_item-wrapper-map {
+  display: none;
+}
+.contacts_contact-text {
+  height: 100%;
+  background-color: rgba(121,168,241,.6);
+  padding: 15px;
+  color: $colour-4;
+  font-size: 18px;
+}
+
+.contacts_map {
+  text-align: center;
+  background-color: white;
+  iframe {
+    width: 100%;
+  }
+}
+.contacts_gradient {
+  position:absolute;
+  z-index: 0;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient($colour-1, rgba(0,0,0,0));
+}
+.social {
+  position: absolute;
+  right: 30px;
+  bottom: 10px;
+  display: inline-block;
+
+  a {
+    display: inline-block;
+    font-size: 34px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .fa-facebook-square {
+    color: #2D4B8E;
+  }
+}

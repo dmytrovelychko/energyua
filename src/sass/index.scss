@@ -1,0 +1,30 @@
+$title-lg: 34px;
+$title-md: 26px;
+$text-md: 20px;
+$text-xs: 10px;
+
+$colour-1: #3279C4;
+$colour-2: #6DA8F7;
+$colour-3: #2D4B8E;
+$colour-4: white;
+
+$padding-1: 15px;// $padding-1: 40px; // red
+$padding-2: 30px; // green
+$padding-3: 15px; // purple
+$padding-4: 15px; // dark blue
+
+
+
+@import 'reset';
+@import 'navbar/_index';
+@import 'navbar/_media';
+@import 'header/_index';
+@import 'header/_media';
+@import 'block-title/_index';
+@import 'block-title/_media';
+@import 'block-4el/_index';
+@import 'block-4el/_media';
+@import 'block-3el/_index';
+@import 'block-3el/_media';
+@import 'contacts/_index';
+@import 'contacts/_media';

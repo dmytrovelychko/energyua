@@ -1,0 +1,64 @@
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+  .navbar-collapsed {
+    font-size: 18px;
+  }
+  .navbar_collapsed_menu__transition {
+    height: 340px;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+   .navbar-n {
+     display: block;
+   }
+   .navbar-collapsed {
+     display: none;
+   }
+  .navbar-n_logo {
+    padding-left: 30px;
+  }
+  .navbar-n_menu {
+    padding-right: 30px;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  .navbar-n_menu-item>a {
+    font-size: 15px;
+    padding-left: 1.3em;
+    padding-right: 1.3em;
+    max-width: 250px;
+  }
+  .navbar {
+    .lang-v_item>a {
+      padding-left: 1.3em;
+      padding-right: 1.3em;
+    }
+    .lang-v_img {
+      height: 65%;
+    }
+  }
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+  .navbar-n_menu-item>a {
+    font-size: 17px;
+  }
+  .navbar {
+    .lang-v_img {
+      height: 75%;
+    }
+  }
+}
