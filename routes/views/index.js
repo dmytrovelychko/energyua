@@ -9,6 +9,9 @@ exports = module.exports = function (req, res) {
 	// item in the header navigation.
 	locals.section = 'home';
 
+	view.query('texts', keystone.list('Text').model.find().sort('sortOrder'));
+	console.dir(view);
+
 	// Render the view
 	view.render('index');
 };

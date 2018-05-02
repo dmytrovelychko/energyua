@@ -47,7 +47,11 @@
 </head>
 
 <body>
-
+{{#if texts}}
+	{{#each texts}}
+		<h2>{{name}}</h2>
+	{{/each}}
+{{/if}}
 <nav class="navbar">
 	<div class="navbar-n">
 		<div class="navbar-n_logo">
