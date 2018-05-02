@@ -36,6 +36,7 @@ gulp.task('sass', function () {
 gulp.task('common-js', function () {
 	return gulp.src([
 		'src/js/common.js',
+		'src/js/main.js',
 	])
         .pipe(concat('common.min.js'))
         .pipe(uglify())
@@ -45,7 +46,7 @@ gulp.task('common-js', function () {
 gulp.task('js', ['common-js'], function () {
 	return gulp.src([
 		'src/libs/jquery/dist/jquery.min.js',
-		'app/js/common.min.js', // should be in the end
+		'src/js/common.min.js', // should be in the end
 	])
         .pipe(concat('scripts.min.js'))
         .pipe(uglify())
