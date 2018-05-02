@@ -17,7 +17,7 @@ keystone.init({
 
 	'sass': 'public',
 	'static': 'public',
-	'favicon': 'public/favicon.ico',
+	'favicon': 'public/img/favicon/favicon.ico',
 	'views': 'templates/views',
 	'view engine': '.hbs',
 
@@ -55,7 +55,7 @@ keystone.set('routes', require('./routes'));
 // Configure the navigation bar in Keystone's Admin UI
 keystone.set('nav', {
 	galleries: 'galleries',
-	enquiries: 'enquiries',
+	texts: 'texts',
 	users: 'users',
 });
 
