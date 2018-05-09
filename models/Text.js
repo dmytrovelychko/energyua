@@ -1,15 +1,15 @@
-var keystone = require('keystone');
-var Types = keystone.Field.Types;
+const keystone = require('keystone');
+const Types = keystone.Field.Types;
 
 /**
  * Text Model
  * =============
  */
-
-var Text = new keystone.List('Text');
+const Text = new keystone.List('Text');
 
 Text.add({
-	name: { type: Types.Key, required: true },
+	partial: { type: String },
+	placeholder: { type: Types.Key, required: true, default: 'nav-btn-1' },
 	en: { type: String },
 	ru: { type: String },
 	ua: { type: String },
@@ -18,5 +18,5 @@ Text.add({
 });
 
 Text.defaultSort = '-createdAt';
-Text.defaultColumns = 'name, en, ru, ua, chi, createdAt';
+Text.defaultColumns = 'partial, placeholder, en, ua, ru, chi, createdAt';
 Text.register();

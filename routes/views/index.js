@@ -1,17 +1,29 @@
-var keystone = require('keystone');
+const keystone = require('keystone');
 
-exports = module.exports = function (req, res) {
+const restructureTexts = (docs, lang) => {
+	let collector = {};
 
-	var view = new keystone.View(req, res);
-	var locals = res.locals;
+	docs.forEach((doc) => {
+		if (!collector.hasOwnProperty(doc.partial)) {
+			collector[doc.partial] = {};
+		}
+		collector[doc.partial][doc.placeholder || 'unknown'] = doc[lang];
+	});
+	return collector;
+};
+
+exports = module.exports = async function (req, res) {
+	const view = new keystone.View(req, res);
+	const locals = res.locals;
 
 	// locals.section is used to set the currently selected
 	// item in the header navigation.
 	locals.section = 'home';
 
-	view.query('texts', keystone.list('Text').model.find().sort('sortOrder'));
-	console.dir(view);
+	const docs = await keystone.list('Text').model.find().sort('sortOrder').exec();
+	let viewData = restructureTexts(docs, 'en');
+	console.dir(viewData);
 
 	// Render the view
-	view.render('index');
+	view.render('index', viewData);
 };

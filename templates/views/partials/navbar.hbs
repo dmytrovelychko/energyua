@@ -1,3 +1,4 @@
+{{#with navbar}}
 <nav class="navbar">
 	<div class="navbar-n">
 		<div class="navbar-n_logo">
@@ -22,13 +23,13 @@
 				</div>
 			</li>
 			<li class="navbar-n_delimiter"></li>
-			<li class="navbar-n_menu-item"><a href="#contacs">контакти</a></li>
+			<li class="navbar-n_menu-item"><a href="#contacs">{{nav-btn-4}}</a></li>
 			<li class="navbar-n_delimiter"></li>
-			<li class="navbar-n_menu-item"><a href="#association">ассоціація СЕУ</a></li>
+			<li class="navbar-n_menu-item"><a href="#association">{{nav-btn-3}}</a></li>
 			<li class="navbar-n_delimiter"></li>
-			<li class="navbar-n_menu-item"><a href="#cooparatives">енергокооперативи</a></li>
+			<li class="navbar-n_menu-item"><a href="#cooparatives">{{nav-btn-2}}</a></li>
 			<li class="navbar-n_delimiter"></li>
-			<li class="navbar-n_menu-item"><a href="#about">про нас</a></li>
+			<li class="navbar-n_menu-item"><a href="#about">{{nav-btn-1}}</a></li>
 		</ul>
 	</div>
 
@@ -45,10 +46,10 @@
 		</div>
 
 		<ul class="navbar-collapsed_menu">
-			<li class="navbar-collapsed_menu-item"><a href="#about">про нас</a></li>
-			<li class="navbar-collapsed_menu-item"><a href="#cooparatives">енергокооперативи</a></li>
-			<li class="navbar-collapsed_menu-item"><a href="#association">ассоціація сонячної енергетики україни</a></li>
-			<li class="navbar-collapsed_menu-item"><a href="#contacs">контакти</a></li>
+			<li class="navbar-collapsed_menu-item"><a href="#about">{{nav-btn-1}}</a></li>
+			<li class="navbar-collapsed_menu-item"><a href="#cooparatives">{{nav-btn-2}}</a></li>
+			<li class="navbar-collapsed_menu-item"><a href="#association">{{nav-btn-3}}</a></li>
+			<li class="navbar-collapsed_menu-item"><a href="#contacs">{{nav-btn-4}}</a></li>
 			<li class="navbar-collapsed_menu-item">
 				<a class="invisible" href="#">Invisible hack</a>
 				<div class="navbar-collapsed_lang-wrapper">
@@ -68,3 +69,4 @@
 		</ul>
 	</div>
 </nav>
+{{/with}}
