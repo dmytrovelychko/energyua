@@ -1,20 +1,13 @@
+{{#with contacts}}
 <div class="contacts">
-	<div class="contacts_title">
-		Контакти
-	</div>
+	<div class="contacts_title">{{title}}</div>
 	<div class="contacts_content">
 		<div class="contacts_gradient"></div>
 		<div class="contacts_container container-fluid">
 			<div class="contacts-row row">
 				<div class="col-sm-4 contacts_item-wrapper">
 					<div class="contacts_contact-text">
-						04080, Україна, м.Київ, вул В.Хвойки 18/14
-						<br>
-						корпус 7, офіс 708
-						<br>
-						info@energy.ua
-						<br>
-						(044) 360-47-36
+						<div>{{{content}}}</div>
 						<div class="social">
 							<a href=""><i class="fa fa-facebook-square"></i></a>
 							<a href=""><i class="fa fa-twitter-square"></i></a>
@@ -30,3 +23,4 @@
 		</div>
 	</div>
 </div>
+{{/with}}

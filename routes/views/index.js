@@ -7,7 +7,7 @@ const restructureTexts = (docs, lang) => {
 		if (!collector.hasOwnProperty(doc.partial)) {
 			collector[doc.partial] = {};
 		}
-		collector[doc.partial][doc.placeholder || 'unknown'] = doc[lang];
+		collector[doc.partial][doc.placeholder || 'unknown'] = doc[lang] || 'text';
 	});
 	return collector;
 };
@@ -21,7 +21,7 @@ exports = module.exports = async function (req, res) {
 	locals.section = 'home';
 
 	const docs = await keystone.list('Text').model.find().sort('sortOrder').exec();
-	let viewData = restructureTexts(docs, 'en');
+	let viewData = restructureTexts(docs, 'ua');
 	console.dir(viewData);
 
 	// Render the view

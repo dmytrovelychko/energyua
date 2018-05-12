@@ -1,23 +1,21 @@
+{{#with header}}
 <header class="header">
 	<div class="header_upper-part">
 		<div class="header_wrapper-title">
 			<div class="header_title">
 				<img class="header_logo" alt= "logo" src="img/energyua_logo.png"/>
-				<div class="header_title-text">Енергія, яку Ви генеруєте</div>
+				<div class="header_title-text">{{title}}</div>
 			</div>
 		</div>
-		<div class="header_gradient1">
-
-		</div>
+		<div class="header_gradient1"></div>
 	</div>
 
 	<div class="header_lower-part">
+
 		<div id="#about" class="header_info-wrapper">
 			<div class="header_info">
 				<div class="header_info-inner">
-					<div class="header_info-title">
-						Послуги професіоналів
-					</div>
+					<div class="header_info-title">{{info-title}}</div>
 					<div class="header_info-content container-fluid">
 						<div class="row">
 							<div class="hc-xs-12 hc-col-sm-6 header_info-item">
@@ -25,14 +23,10 @@
 									<div class="about_header">
 										<img class="about_icon" alt="" src="img/wireframe.png"/>
 										<div class="about_title">
-											<div class="about_title-content">Консалтинг</div>
+											<div class="about_title-content">{{block1-title}}</div>
 										</div>
 									</div>
-									<div class="about_content">
-										Більше 10ти років успішного супроводу проектів у сфері геренрації сонячної енергетики
-										та багато іншого бла-бла яке вам неодмінно
-										сподобаєтся
-									</div>
+									<div class="about_content">{{{block1-content}}}</div>
 								</div>
 							</div>
 							<div class="hc-xs-12 hc-col-sm-6 header_info-item">
@@ -40,16 +34,10 @@
 									<div class="about_header">
 										<img class="about_icon" alt="" src="img/packaging.png"/>
 										<div class="about_title">
-											<div class="about_title-content">Проекти "під ключ"</div>
+											<div class="about_title-content">{{block2-title}}</div>
 										</div>
 									</div>
-									<div class="about_content">
-										Ну просто бомбезні проекти. Так ви ще не
-										бачили. Більше 10ти років успішного супроводу
-										проектів у сфері геренрації сонячної нергетики
-										та багато іншого бла-бла яке вам неодмінно
-										сподобаєтся
-									</div>
+									<div class="about_content">{{{block2-content}}}</div>
 								</div>
 							</div>
 						</div>
@@ -59,17 +47,10 @@
 									<div class="about_header">
 										<img class="about_icon" alt="" src="img/graphic-tablet.png"/>
 										<div class="about_title">
-											<div class="about_title-content">Рішення для інвесторів</div>
+											<div class="about_title-content">{{block3-title}}</div>
 										</div>
 									</div>
-									<div class="about_content">
-										Дуже треба було вставити сюди
-										важливий текст але на українській мові...
-										Отак і наліпив аби шо... Кожній тварі по парі.
-										Сало з маслом Дуже треба було вставити
-										сюди важливий текст але на українській
-										мові...
-									</div>
+									<div class="about_content">{{{block3-content}}}</div>
 								</div>
 							</div>
 							<div class="hc-xs-12 hc-col-sm-6 header_info-item">
@@ -77,17 +58,10 @@
 									<div class="about_header">
 										<img class="about_icon" alt="" src="img/loupe.png"/>
 										<div class="about_title">
-											<div class="about_title-content">Гарантійний супровід</div>
+											<div class="about_title-content">{{block4-title}}</div>
 										</div>
 									</div>
-									<div class="about_content">
-										Дуже треба було вставити сюди
-										важливий текст але на українській мові...
-										Отак і наліпив аби шо... Кожній тварі по парі.
-										Сало з маслом Дуже треба було вставити
-										сюди важливий текст але на українській
-										мові...
-									</div>
+									<div class="about_content">{{{block4-content}}}</div>
 								</div>
 							</div>
 						</div>
@@ -95,5 +69,7 @@
 				</div>
 			</div>
 		</div>
+
 	</div>
 </header>
+{{/with}}
