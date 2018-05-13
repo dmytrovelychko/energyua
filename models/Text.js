@@ -10,10 +10,11 @@ const Text = new keystone.List('Text');
 Text.add({
 	partial: { type: String },
 	placeholder: { type: Types.Key, required: true, default: 'not set' },
-	en: { type: Types.Textarea },
-	ru: { type: Types.Textarea },
 	ua: { type: Types.Textarea },
+	en: { type: Types.Textarea },
 	chi: { type: Types.Textarea },
+	de: { type: Types.Textarea },
+	ru: { type: Types.Textarea },
 	createdAt: { type: Date, default: Date.now },
 });
 

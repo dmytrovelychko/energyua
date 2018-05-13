@@ -1,5 +1,8 @@
 const keystone = require('keystone');
 
+const LANGUAGE_CODES = ['ua', 'en', 'chi', 'de'];
+
+
 const restructureTexts = (docs, lang) => {
 	let collector = {};
 
@@ -13,6 +16,11 @@ const restructureTexts = (docs, lang) => {
 };
 
 exports = module.exports = async function (req, res) {
+	let lang = req.query && req.query.lang;
+	if (!LANGUAGE_CODES.includes(lang)) {
+		lang = 'ua';
+	}
+	console.dir(lang);
 	const view = new keystone.View(req, res);
 	const locals = res.locals;
 
@@ -21,8 +29,8 @@ exports = module.exports = async function (req, res) {
 	locals.section = 'home';
 
 	const docs = await keystone.list('Text').model.find().sort('sortOrder').exec();
-	let viewData = restructureTexts(docs, 'ua');
-	console.dir(viewData);
+	let viewData = restructureTexts(docs, lang);
+	// console.dir(viewData);
 
 	// Render the view
 	view.render('index', viewData);
