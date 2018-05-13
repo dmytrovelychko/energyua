@@ -139,7 +139,7 @@ module.exports = function () {
 
 		Object.keys(data).forEach((key) => {
 			partList += `<li class="lang-h_item ${(key === currentLang) ? 'lang-h_item__chosen' : ''}">
-            	<a href="?lang=${key}"><img class="lang-h_img" alt=${data[key].alt} src=${data[key].src} ></a></li>`;
+            	<a ${(key === currentLang) ? '' : 'href=?lang=' + key}><img class="lang-h_img" alt=${data[key].alt} src=${data[key].src} ></a></li>`;
 		});
 
 		return partList;
