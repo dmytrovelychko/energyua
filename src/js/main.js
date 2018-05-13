@@ -1,5 +1,3 @@
-// TODO on load detect current language and set appropriate flags
-
 var heightCollpsedNavbarMenu = null;
 
 function calclulateHeightCollapsedNavbarMenu() {
@@ -41,10 +39,6 @@ $('.lang-v_item__chosen').click(function() {
 });
 $('.lang-v_item__option').click(function() {
 	$('.lang-v_options').toggleClass('hidden');
-
-	// TODO: change language
-	// will be send request with get parameter for language
-
 });
 
 
