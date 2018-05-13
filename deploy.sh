@@ -3,22 +3,22 @@ set -x
 set -e
 
 echo "BE SURE YOUR ARE CONNECTED AS 'eua' USER"
-echo "stop service"
-# will be if service is running
+echo "=========================================Stop service"
+pm2 stop keystone
 
-echo "Turn on production mode"
+echo "=========================================Turn on production mode"
 NODE_ENV=production
 
-echo "Update repository"
+echo "=========================================Update repository"
 git pull origin master
+echo "=========================================Update packages"
 npm i
-# add css rebuild here with gulp
+echo "=========================================Rebuild front-end"
 ./node_modules/gulp/bin/gulp.js build
 
 
-
-echo "start service"
-chmod +x ./keystone.js
-
+echo "=========================================start service"
+sudo chmod +x ./keystone.js
+pm2 start keystone
 
 
