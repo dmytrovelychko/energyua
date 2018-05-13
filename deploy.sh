@@ -13,6 +13,8 @@ echo "Update repository"
 git pull origin master
 npm i
 # add css rebuild here with gulp
+./node_modules/gulp/bin/gulp.js build
+
 
 
 echo "start service"
