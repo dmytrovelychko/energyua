@@ -2,6 +2,7 @@
 set -x
 set -e
 
+echo "BE SURE YOUR ARE CONNECTED AS 'eua' USER"
 echo "stop service"
 # will be if service is running
 
@@ -15,7 +16,7 @@ npm i
 
 
 echo "start service"
-
+chmod +x ./keystone.js
 
 
 
