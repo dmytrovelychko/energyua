@@ -28,7 +28,7 @@ gulp.task('removedist', function () {
 
 gulp.task('imagemin', function () {
 	return gulp.src(`${SRC_DIR}/img/**/*`)
-		.pipe(cache(imagemin()))
+		// .pipe(cache(imagemin()))
 		.pipe(gulp.dest(`${PUBLIC_DIR}/img`));
 });
 
