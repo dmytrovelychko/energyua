@@ -17,6 +17,5 @@ echo "=========================================Rebuild front-end"
 
 
 echo "=========================================start service"
-sudo chmod +x ./keystone.js
 pm2 start keystone
 
