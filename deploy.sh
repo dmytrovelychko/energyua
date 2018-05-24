@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 set -x
-set -e
 
 echo "BE SURE YOUR ARE CONNECTED AS 'eua' USER"
 echo "=========================================Stop service"
@@ -20,5 +19,4 @@ echo "=========================================Rebuild front-end"
 echo "=========================================start service"
 sudo chmod +x ./keystone.js
 pm2 start keystone
-
 
