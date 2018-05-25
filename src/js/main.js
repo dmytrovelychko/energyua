@@ -53,3 +53,25 @@ function maximizeHeaderInfoContentHeight() {
 	});
 	infoContents.css({ height: maxHeight });
 }
+
+// smooth scrolling
+$('#nav-btn-1').click(function() {
+	$('html,body').animate({
+			scrollTop: $('#nav-btn-1-content').offset().top - 45},
+		'slow');
+});
+$('#nav-btn-2').click(function() {
+	$('html,body').animate({
+			scrollTop: $('#nav-btn-2-content').offset().top - 45},
+		'slow');
+});
+$('#nav-btn-3').click(function() {
+	$('html,body').animate({
+			scrollTop: $('#nav-btn-3-content').offset().top - 45},
+		'slow');
+});
+$('#nav-btn-4').click(function() {
+	$('html,body').animate({
+			scrollTop: $('#nav-btn-4-content').offset().top - 45},
+		'slow');
+});
