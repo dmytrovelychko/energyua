@@ -3,7 +3,6 @@
     display: block;
   }
 }
-
 @media only screen and (min-width : 768px) {
   .contacts-row {
     display: flex;
@@ -11,6 +10,10 @@
     .contacts_item-wrapper:first-child {
       padding-right: 0;
     }
+	.social {
+	  right: 15px;
+	  bottom: 10px;
+	}
   }
 }
 @media only screen and (min-width : 992px) {
@@ -37,8 +40,8 @@
     }
 
     .social {
-      right: 15px;
-      bottom: 30px;
+      right: 20px;
+      bottom: 40px;
 
       &>a {
         font-size: 45px;

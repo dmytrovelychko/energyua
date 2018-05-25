@@ -32,6 +32,7 @@
     "gulp-uglify": "3.0.0"
   },
   "scripts": {
+    "deploy": "./deploy.sh",
     "build": "./node_modules/gulp/bin/gulp.js build",
     "lint": "eslint .",
     "start": "node keystone.js"
