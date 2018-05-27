@@ -75,3 +75,28 @@ $('#nav-btn-4').click(function() {
 			scrollTop: $('#nav-btn-4-content').offset().top - 60},
 		'slow');
 });
+
+$('#nav-btn-clps-1').click(function() {
+	$('.navbar-collapsed_menu').css({ height: 0 });
+	$('html,body').animate({
+			scrollTop: $('#nav-btn-1-content').offset().top - 60},
+		'slow');
+});
+$('#nav-btn-clps-2').click(function() {
+	$('.navbar-collapsed_menu').css({ height: 0 });
+	$('html,body').animate({
+			scrollTop: $('#nav-btn-2-content').offset().top - 60},
+		'slow');
+});
+$('#nav-btn-clps-3').click(function() {
+	$('.navbar-collapsed_menu').css({ height: 0 });
+	$('html,body').animate({
+			scrollTop: $('#nav-btn-3-content').offset().top - 60},
+		'slow');
+});
+$('#nav-btn-clps-4').click(function() {
+	$('.navbar-collapsed_menu').css({ height: 0 });
+	$('html,body').animate({
+			scrollTop: $('#nav-btn-4-content').offset().top - 60},
+		'slow');
+});
