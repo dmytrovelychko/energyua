@@ -13,7 +13,10 @@ $padding-2: 30px; // green
 $padding-3: 15px; // purple
 $padding-4: 15px; // dark blue
 
-
+.content-limit {
+  max-width: 2000px !important;
+  margin: 0 auto;
+}
 
 @import 'reset';
 @import 'navbar/_index';
