@@ -13,6 +13,9 @@ $padding-2: 30px; // green
 $padding-3: 15px; // purple
 $padding-4: 15px; // dark blue
 
+body {
+  background: #f0f8ff !important;
+}
 .content-limit {
   max-width: 2000px !important;
   margin: 0 auto;
