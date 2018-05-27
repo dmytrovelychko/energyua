@@ -197,6 +197,8 @@ $nav-height: 60px;
     padding-left: 7px;
     padding-right: 7px;
     text-align: center;
+	display: inline-block;
+	height: 60px;
   }
   &:hover {
     background-color: $colour-4;
