@@ -7,7 +7,9 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) {
-
+  .test_img{
+	max-width: 350px;
+  }
 }
 
 @media only screen and (min-width: 560px) {
