@@ -1,6 +1,5 @@
 .test_img {
-  height: 200px;
-  width: 300px;
+  height: auto;
   max-width: 350px;
   background-color: $colour-1;
   display: inline-block;
@@ -17,6 +16,7 @@
 .block-4el_row {
 }
 .block-4el_item {
+  position: relative;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 20px;
@@ -24,4 +24,6 @@
   text-align: center;
   font-size: $text-md;
   color: $colour-1;
+}
+.block-4el_text__vcenter {
 }
