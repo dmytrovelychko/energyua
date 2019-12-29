@@ -27,6 +27,7 @@ keystone.init({
 		layoutsDir: 'templates/views/layouts',
 		partialsDir: 'templates/views/partials',
 		defaultLayout: 'default',
+		// eslint-disable-next-line no-new-require
 		helpers: new require('./templates/views/helpers')(),
 		extname: '.hbs',
 	}).engine,
@@ -35,6 +36,9 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
+
+	// only for dev as mongodb inside docker
+	// 'mongo': 'mongodb://root:example@localhost:27017/energy-ua',
 });
 
 // Load your project's Models
