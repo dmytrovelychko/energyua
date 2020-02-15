@@ -38,7 +38,7 @@ keystone.init({
 	'user model': 'User',
 
 	// only for dev as mongodb inside docker
-	// 'mongo': 'mongodb://root:example@localhost:27017/energy-ua',
+	'mongo': 'mongodb://root:example@localhost:27017/energy-ua',
 });
 
 // Load your project's Models

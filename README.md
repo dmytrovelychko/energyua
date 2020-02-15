@@ -24,7 +24,8 @@ Landing page for energy ua company based on [keystone.js](https://www.keystonejs
         
         `'mongo':'mongodb://root:example@localhost:27017/energy-ua'`
 
-3. `npm start`
+3. `npm run build` 
+4. `npm start`
 
 ### Deployment
 // TODO
