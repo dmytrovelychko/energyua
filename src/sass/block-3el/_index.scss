@@ -1,7 +1,11 @@
 .block-3el {
   position: relative;
   background-color: $colour-1;
-  overflow: hidden;
+  overflow: hidden; 
+	
+	.img-full {
+		width: 100%;
+	}
 }
 .block-3el_subtitle {
   font-size: $text-md;
